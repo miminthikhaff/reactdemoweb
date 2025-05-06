@@ -10,7 +10,7 @@ export default function App() {
   );
 } */
 
-
+import './App.css';
 
 function App() {  
   return (
@@ -41,3 +41,4 @@ class App extends Component {
 export default App;
 
 */
+
