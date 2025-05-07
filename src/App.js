@@ -14,8 +14,8 @@ import './App.css';
 
 function App() {  
   return (
-    <div className="App">
-      <h1>I am from App Component</h1>  
+    <div className="container">
+      <h1 className='main-title'>I am from App Component</h1>  
     </div>
   );
 }
