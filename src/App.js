@@ -10,21 +10,29 @@ export default function App() {
   );
 } */
 
-import './App.css';
-import Company from './components/company/Company.js'; // Importing the Company component
+import "./App.css";
+import Company from "./components/company/Company.js"; // Importing the Company component
 
-
-function App() {  
+function App() {
   return (
     <div className="container">
-      <h1 className='main-title'>I am from App Component</h1>  
-      <Company companyName="Google" details="You can search anything"/>
+      <h1 className="main-title">I am from App Component</h1>
+      <Company companyName="Google" details="You can search anything" />
+      <Company companyName="Microsoft" details="You can explore anything" />
+      <Company companyName="Meta" details="You can connect with anyone" />
+      <Company>
+        <div>
+          <h4>
+            I'm from App component, but I will load inside the company
+            component
+          </h4>
+        </div>
+      </Company>
     </div>
   );
 }
 
 export default App;
-
 
 /* 
 
@@ -44,4 +52,3 @@ class App extends Component {
 export default App;
 
 */
-
