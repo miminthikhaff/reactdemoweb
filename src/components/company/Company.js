@@ -1,13 +1,16 @@
 function company(props) {
-  // console.log(props);
-
-const { companyName = 'Unknown Company = ', details = 'No details available about the company', children } = props;
+  const {
+    companyName = "Unknown Company",
+    details = "No details available about the company",
+  } = props;
 
   return (
     <div className="company">
-      <h1>Company Name: {companyName} </h1>
+      <h1>Company Name: {companyName}</h1>
       <p>{details}</p>
-      { children} 
+      <button onClick={() => console.log("Button clicked")}>
+        Select {companyName}
+      </button>
     </div>
   );
 }
@@ -24,6 +27,6 @@ const { companyName = 'Unknown Company = ', details = 'No details available abou
 }; */
 
 // The above code sets default values for the props of the company component.
-// If the component is used without passing any props, it will display the default values.  
+// If the component is used without passing any props, it will display the default values.
 
 export default company;
