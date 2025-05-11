@@ -8,7 +8,11 @@ function company(props) {
     <div className="company">
       <h1>Company Name: {companyName}</h1>
       <p>{details}</p>
-      <button onClick={() => console.log("Button clicked")}>
+      <button
+        onClick={() => {
+          console.log("Button clicked");
+        }}
+      >
         Select {companyName}
       </button>
     </div>
