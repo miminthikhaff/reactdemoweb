@@ -26,3 +26,13 @@ p{
     margin-bottom: 1rem;
 }
 
+button{
+    background-color: rgb(197, 184, 194);
+    color: white;
+    border: none;
+    padding: 0px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
