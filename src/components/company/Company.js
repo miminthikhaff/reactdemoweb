@@ -4,13 +4,15 @@ function company(props) {
     details = "No details available about the company",
   } = props;
 
+   
+
   return (
     <div className="company">
       <h1>Company Name: {companyName}</h1>
       <p>{details}</p>
       <button
         onClick={() => {
-          console.log("Button clicked");
+          console.log('Button clicked' + companyName);
         }}
       >
         Select {companyName}
