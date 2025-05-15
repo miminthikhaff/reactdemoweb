@@ -1,38 +1,58 @@
 /* Thia index.css is used to write for styling globally */
 
-*  {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #333;
-    background-color: #f4f4f4;
-    line-height: 1.5;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.5;
+  text-decoration: none;
 }
 
 body {
-    background-color: rgb(226, 226, 226);
+  background-color: rgb(226, 226, 226);
 }
 
-
-h1{
-    color: rgb(247, 23, 198);
-  }
-
-p{
-    font-size: 1.0rem;
-    margin-bottom: 1rem;
+h1 {
+  color: rgb(247, 23, 198);
+  background-color: transparent;
 }
 
-button{
-    background-color: rgb(197, 184, 194);
-    color: white;
-    border: none;
-    padding: 0px 4px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 2rem;
+h2 {  
+  background-color: transparent;
 }
 
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+button {
+  background-color: rgb(197, 184, 194);
+  color: white;
+  border: none;
+  padding: 0px 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.primary-btn-md {
+  border: none;
+  color: white;
+  background-color: rgb(48, 26, 221);
+  font-size: 1rem;
+  padding: 0rem 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.primary-btn-md:hover {
+  background-color: rgb(12, 0, 105);
+  color: white;
+  transform: scale(1.05);
+  cursor: pointer;
+}
