@@ -1,24 +1,21 @@
-function company(props) {
+import "./Company.css";
+import Department from "../department/Department";
+
+function Company(props) {
   const {
     companyName = "Unknown Company",
-    details = "No details available about the company",
+    details = "No details available" ,
   } = props;
 
-  const buttonHandler = (companyName) => {
-    console.log("Button clicked" + companyName);
-  };
-
   return (
-    <div className="company">
-      <h1>Company Name: {companyName}</h1>
+    <div className="details">
+      <h2>
+        Company Name: <span>{companyName}</span>
+        {""}
+      </h2>
       <p>{details}</p>
-      <button
-        onClick={() => {
-          buttonHandler(companyName);
-        }}
-      >
-        Select {companyName}
-      </button>
+      <button className="primary-btn-md">Select {companyName}</button>
+      <Department />
     </div>
   );
 }
@@ -37,4 +34,4 @@ function company(props) {
 // The above code sets default values for the props of the company component.
 // If the component is used without passing any props, it will display the default values.
 
-export default company;
+export default Company;
