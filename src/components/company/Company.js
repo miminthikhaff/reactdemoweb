@@ -4,7 +4,9 @@ function company(props) {
     details = "No details available about the company",
   } = props;
 
-   
+  const buttonHandler = (companyName) => {
+    console.log("Button clicked" + companyName);
+  };
 
   return (
     <div className="company">
@@ -12,7 +14,7 @@ function company(props) {
       <p>{details}</p>
       <button
         onClick={() => {
-          console.log('Button clicked' + companyName);
+          buttonHandler(companyName);
         }}
       >
         Select {companyName}
