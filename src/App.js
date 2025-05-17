@@ -13,18 +13,24 @@ export default function App() {
 import "./App.css";
 import Company from "./components/company/Company.js"; // Importing the Company component
 
+
 function App() {
+  const departments = ["HR", "Finance", "IT", "Marketing"];
+
   return (
     <div className="container">
       <h1 className="main-title">I am from App Component</h1>
-      <Company companyName="Google" details="You can search anything" />
-      <Company companyName="Microsoft" details="You can explore anything" />
-      <Company companyName="Meta" details="You can connect with anyone" />
+      <Company
+        companyName="Google"
+        details="You can search anything"
+        departments={departments}
+      />
+      <Company companyName="Microsoft" details="You can explore anything" departments={departments} />
+      <Company companyName="Meta" details="You can connect with anyone" departments={departments} />
       <Company>
         <div>
           <h4>
-            I'm from App component, but I will load inside the company
-            component
+            I'm from App component, but I will load inside the company component
           </h4>
         </div>
       </Company>
@@ -39,6 +45,7 @@ export default App;
 Writting class component in react
 
 import React, { Component } from 'react';
+import Department from './components/department/Department';
 
 class App extends Component {
   render() {  
