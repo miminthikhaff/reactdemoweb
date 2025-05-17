@@ -1,10 +1,12 @@
 import "./Company.css";
 import Department from "../department/Department";
 
+
 function Company(props) {
   const {
     companyName = "Unknown Company",
-    details = "No details available" ,
+    details = "No details available",
+    departments,
   } = props;
 
   return (
@@ -15,7 +17,9 @@ function Company(props) {
       </h2>
       <p>{details}</p>
       <button className="primary-btn-md">Select {companyName}</button>
-      <Department />
+      <Department departments={departments}>
+        <h5>Departments</h5>
+      </Department>
     </div>
   );
 }
@@ -23,7 +27,8 @@ function Company(props) {
 // The above code is a functional component in React that takes props as an argument and returns a JSX element.
 // The component is named "company" and it displays the company name and details passed to it as props.
 // The component is then exported as the default export of the module, allowing it to be imported and used in other files.
-// The component is styled with a class name "company" which can be used to apply CSS styles.
+// The component is styled with a class name "company" which can be used to apply CSS styles. import Department from './../department/Department';
+
 // The component is a simple example of how to create a reusable component in React that can accept props and render dynamic content.
 
 /* company.defaultProps = {
