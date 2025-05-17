@@ -21,8 +21,12 @@ h1 {
   background-color: transparent;
 }
 
-h2 {  
+h2 {
   background-color: transparent;
+}
+
+h5 {
+  background-color: white;
 }
 
 p {
@@ -48,6 +52,29 @@ button {
   padding: 0rem 1rem;
   border-radius: 1rem;
   transition: all 0.3s;
+}
+
+li {
+   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* spacing between buttons */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: transparent;
+  margin-top: 0.5rem;
+}
+
+
+
+.btn-sm {
+  border: none;
+  color: white;
+  background-color: rgb(5, 5, 5);
+  font-size: 0.8rem;
+  padding: 0rem 1rem;  
+  transition: all 0.3s;
+  margin: 0.5rem;
 }
 
 .primary-btn-md:hover {
