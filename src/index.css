@@ -77,6 +77,14 @@ li {
   margin: 0.5rem;
 }
 
+.btn-sm:hover {
+  background-color: rgb(70, 70, 70);
+  color: white;
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 .primary-btn-md:hover {
   background-color: rgb(12, 0, 105);
   color: white;
