@@ -11,8 +11,8 @@ export default function App() {
 } */
 
 import "./App.css";
-import Company from "./components/company/Company.js"; // Importing the Company component
-
+import Company from "./components/company/Company.js";
+import { companies } from "./components/dataset.js";
 
 function App() {
   const departments = ["HR", "Finance", "IT", "Marketing"];
@@ -20,20 +20,16 @@ function App() {
   return (
     <div className="container">
       <h1 className="main-title">I am from App Component</h1>
-      <Company
-        companyName="Google"
-        details="You can search anything"
-        departments={departments}
-      />
-      <Company companyName="Microsoft" details="You can explore anything" departments={departments} />
-      <Company companyName="Meta" details="You can connect with anyone" departments={departments} />
-      <Company>
-        <div>
-          <h4>
-            I'm from App component, but I will load inside the company component
-          </h4>
-        </div>
-      </Company>
+      {
+        companies.map((company, index) => (
+          <Company
+            key={company.id}
+            companyName={company.companyName}
+            details={company.details}
+            departments={company.departments}
+          />
+        ))
+      }
     </div>
   );
 }
