@@ -24,7 +24,12 @@ function Company(props) {
       >
         Select {companyName}
       </button>
-      <Department departments={departments}>
+      <Department
+        departments={departments}
+        onDepartmentSelect={(department) => {
+          onCompanySelect(`companyName - ${department}`);
+        }}
+      >
         <h5>Departments</h5>
       </Department>
     </div>
