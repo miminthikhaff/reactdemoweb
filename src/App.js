@@ -10,26 +10,30 @@ export default function App() {
   );
 } */
 
+import { useState } from "react";
 import "./App.css";
 import Company from "./components/company/Company.js";
 import { companies } from "./components/dataset.js";
 
 function App() {
-  const departments = ["HR", "Finance", "IT", "Marketing"];
+  const [selectedCompany, setSelectedCompany] = useState("Select a Company"); // Default value
+
+  const handleCompanySelection = (companyName) => {
+    setSelectedCompany(companyName);
+  };
 
   return (
     <div className="container">
-      <h1 className="main-title">I am from App Component</h1>
-      {
-        companies.map((company, index) => (
-          <Company
-            key={company.id}
-            companyName={company.companyName}
-            details={company.details}
-            departments={company.departments}
-          />
-        ))
-      }
+      <h1 className="main-title">{selectedCompany}</h1>
+      {companies.map((company) => (
+        <Company
+          key={company.id}
+          companyName={company.companyName}
+          details={company.details}
+          departments={company.departments}
+          onCompanySelect={handleCompanySelection} // ✅ Corrected
+        />
+      ))}
     </div>
   );
 }
