@@ -1,12 +1,12 @@
 import "./Company.css";
 import Department from "../department/Department";
 
-
 function Company(props) {
   const {
     companyName = "Unknown Company",
     details = "No details available",
     departments,
+    onCompanySelect,
   } = props;
 
   return (
@@ -16,7 +16,14 @@ function Company(props) {
         {""}
       </h2>
       <p>{details}</p>
-      <button className="primary-btn-md">Select {companyName}</button>
+      <button
+        className="primary-btn-md"
+        onClick={() => {
+          onCompanySelect(companyName);
+        }}
+      >
+        Select {companyName}
+      </button>
       <Department departments={departments}>
         <h5>Departments</h5>
       </Department>
