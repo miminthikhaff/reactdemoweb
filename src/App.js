@@ -14,6 +14,7 @@ import { useState } from "react";
 import "./App.css";
 import Company from "./components/company/Company.js";
 import { companies } from "./components/dataset.js";
+import Demo from "./components/Demo.js";
 
 function App() {
   const [selectedCompany, setSelectedCompany] = useState("Select a Company"); // Default value
@@ -34,6 +35,8 @@ function App() {
           onCompanySelect={handleCompanySelection} // ✅ Corrected
         />
       ))}
+      <hr/>
+      <Demo title = {selectedCompany}/>
     </div>
   );
 }
