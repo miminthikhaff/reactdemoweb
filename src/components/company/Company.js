@@ -24,14 +24,16 @@ function Company(props) {
       >
         Select {companyName}
       </button>
-      <Department
+   <div style={{ border: "5px solid grey", padding: "0.6rem 0.8rem", backgroundColor: "white", borderRadius: "1rem" }}>
+       <Department
         departments={departments}
         onDepartmentSelect={(department) => {
           onCompanySelect(`companyName - ${department}`);
         }}
-      >
+      > 
         <h5>Departments</h5>
       </Department>
+   </div>
     </div>
   );
 }
